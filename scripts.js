@@ -4,7 +4,7 @@ const currencyOptions = document.querySelector(".currency-options");
 const currencyValueToConvert = document.querySelector(".currency-value-to-convert");
 const currencyValueToConverted = document.querySelector(".currency-value");
 
-
+convertButton.addEventListener("click", convertValues);
 
 function convertValues() {
     const inputCurrencyValue = parseFloat(document.querySelector(".input-currency").value);
@@ -85,84 +85,71 @@ function convertValues() {
     currencyValueToConverted.innerHTML = convertedValue.toFixed(2);
 }
 
+
+currencySelect.addEventListener("change", changeCurrency);
+
 function changeCurrency() {
-    const currencyName = document.getElementById("#currency-name")
-    const currencyImage = document.querySelector(".currency-img")
+    const currencyName = document.getElementById("currency-name");
+    const currencyImage = document.querySelector(".currency-img");
   
     if (currencySelect.value == "real") {
-        currencyName.innerHTML = "Real Brasileiro"
-        currencyImage.src = "assets/real.png" 
+        currencyName.innerHTML = "Real Brasileiro";
+        currencyImage.src = "assets/real.png.webp"; 
     }
-    
 
     if (currencySelect.value == "dolar") {
-        currencyName.innerHTML = "Dolar Americano"
-        currencyImage.src = "assets/dolar.png" 
+        currencyName.innerHTML = "Dolar Americano";
+        currencyImage.src = "assets/dolar.png"; 
     }
     
     if (currencySelect.value == "euro") {
-        currencyName.innerHTML = "Euro"
-        currencyImage.src = "assets/euro.png" 
+        currencyName.innerHTML = "Euro";
+        currencyImage.src = "assets/euro.png"; 
     }
 
-
-
     if (currencySelect.value == "bitcoin") {
-        currencyName.innerHTML = "Bitcoin"
-        currencyImage.src = "assets/bitcoin.png" 
+        currencyName.innerHTML = "Bitcoin";
+        currencyImage.src = "assets/bitcoin.png"; 
     }
 
     if (currencySelect.value == "libra") {
-        currencyName.innerHTML = "Libra"
-        currencyImage.src = "assets/libra.png" 
+        currencyName.innerHTML = "Libra";
+        currencyImage.src = "assets/libra.png"; 
     }
-
 }
 
 
-function currencyChange () {
- const nameCurrency = document.getElementById("name-currency");
-const imageCurrency = document.querySelector(".img-currency")
 
+currencyOptions.addEventListener("change", currencyChange);
 
-
+function currencyChange() {
+    const nameCurrency = document.getElementById("name-currency");
+    const imageCurrency = document.querySelector(".img-currency");
 
     if (currencyOptions.value == "real") {
-        nameCurrency.innerHTML = "Real Brasileiro"
-        imageCurrency.src = "assets/real.png" 
+        nameCurrency.innerHTML = "Real Brasileiro";
+        imageCurrency.src = "assets/real.png.webp"; 
     }
-    
 
     if (currencyOptions.value == "dolar") {
-        nameCurrency.innerHTML = "Dolar Americano"
-        imageCurrency.src = "assets/dolar.png" 
+        nameCurrency.innerHTML = "Dolar Americano";
+        imageCurrency.src = "assets/dolar.png"; 
     }
     
     if (currencyOptions.value == "euro") {
-        nameCurrency.innerHTML = "Euro"
-        imageCurrency.src = "assets/euro.png" 
+        nameCurrency.innerHTML = "Euro";
+        imageCurrency.src = "assets/euro.png"; 
     }
 
-
-
     if (currencyOptions.value == "bitcoin") {
-        nameCurrency.innerHTML = "Bitcoin"
-        imageCurrency.src = "assets/bitcoin.png" 
+        nameCurrency.innerHTML = "Bitcoin";
+        imageCurrency.src = "assets/bitcoin.png"; 
     }
 
     if (currencyOptions.value == "libra") {
-        nameCurrency.innerHTML = "Libra"
-        imageCurrency.src = "assets/libra.png" 
+        nameCurrency.innerHTML = "Libra";
+        imageCurrency.src = "assets/libra.png"; 
     }
 
 
-
-
-
-
 }
-
-currencySelect.addEventListener("change", changeCurrency)
-currencyOptions.addEventListener("change",currencyChange)
-convertButton.addEventListener("click", convertValues)
-
